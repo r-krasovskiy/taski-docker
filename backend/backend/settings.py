@@ -1,3 +1,4 @@
+"""Settings of the project."""
 import os
 from pathlib import Path
 
@@ -8,7 +9,7 @@ SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '123.123.123.123', '<your_domain>'] 
+ALLOWED_HOSTS = ['localhost', '123.123.123.123', 'taski.redirectme.net']
 
 
 # Application definition
@@ -64,10 +65,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('POSTGRES_DB', 'django'),
-	'USER': os.getenv('POSTGRES_USER', 'django'),
-	'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
-	'HOST': os.getenv('DB_HOST', ''),
-	'PORT': os.getenv('DB_PORT', 5432)
+        'USER': os.getenv('POSTGRES_USER', 'django'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
+        'HOST': os.getenv('DB_HOST', ''),
+        'PORT': os.getenv('DB_PORT', 5432)
     }
 }
 
